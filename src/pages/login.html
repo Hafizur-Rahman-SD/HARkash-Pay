@@ -1,34 +1,72 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HARKASH-PAY | Login</title>
-  
+
+  <!-- daisy + tailwind browser -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    * { font-family: "Outfit", sans-serif; }
+  </style>
 </head>
-<body class="screen">
-  <div class="wrap">
-    <div class="text-center mt-10">
-      <div class="text-4xl font-black tracking-wide">HARKASH<span class="text-indigo-600">-PAY</span></div>
-      <div class="muted mt-2">bKash-like demo experience (Frontend + LocalStorage)</div>
-    </div>
 
-    <div class="card-soft mt-8">
-      <label class="font-semibold">Mobile Number</label>
-      <input id="mobile" class="input-soft mt-2" placeholder="Enter 11 digit number" inputmode="numeric" />
+<body class="min-h-screen max-w-md mx-auto bg-base-200">
 
-      <label class="font-semibold mt-4 block">6 Digit PIN</label>
-      <input id="pin" class="input-soft mt-2" placeholder="Enter 6 digit pin" inputmode="numeric" type="password" />
+  <main class="w-11/12 mx-auto min-h-screen flex flex-col justify-center">
 
-      <button id="btnLogin" class="brand-btn mt-5">Login</button>
-      <button id="btnRegister" class="btn btn-outline w-full rounded-full mt-3">Create New Account (Demo)</button>
-
-      <div class="muted mt-4">
-        Demo note: same browser e data save thakbe. Different browser/device e আলাদা demo data হবে।
+    <section class="text-center mb-8">
+      <div class="flex items-center justify-center gap-3">
+        <img class="w-16" src="../assets/logo.png" alt="logo" onerror="this.style.display='none'">
+        <h1 class="text-3xl font-extrabold tracking-wide">HARKASH-PAY</h1>
       </div>
-    </div>
-  </div>
+      <p class="text-neutral/60 mt-2">bKash-like demo experience (Frontend + LocalStorage)</p>
+    </section>
+
+    <section class="card bg-base-100 shadow rounded-3xl">
+      <div class="card-body">
+
+        <label class="label font-bold">Mobile Number</label>
+        <input id="mobile" maxlength="11" minlength="11"
+          class="input rounded-full bg-base-200 w-full"
+          placeholder="Enter 11 digit number" inputmode="numeric" />
+
+        <label class="label font-bold mt-3">6 Digit PIN</label>
+        <input id="pin" maxlength="6" minlength="6" type="password"
+          class="input rounded-full bg-base-200 w-full"
+          placeholder="Enter 6 digit pin" inputmode="numeric" />
+
+        <button id="btnLogin" class="btn btn-primary rounded-full mt-5">
+          <i class="fa-solid fa-right-to-bracket"></i> Login
+        </button>
+
+        <button id="btnRegister" class="btn btn-soft rounded-full mt-2">
+          Create New Account (Demo)
+        </button>
+
+        <p class="text-neutral/60 text-sm mt-4">
+          Demo note: same browser e data save thakbe. Different browser/device e আলাদা demo data হবে।
+        </p>
+
+      </div>
+    </section>
+
+  </main>
 
   <script type="module" src="../js/pages/loginPage.js"></script>
 </body>
+
 </html>

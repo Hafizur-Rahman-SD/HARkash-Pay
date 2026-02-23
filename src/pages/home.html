@@ -1,48 +1,105 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HARKASH-PAY | Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payoo | Home</title>
+
+  <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon">
+
+  <!-- daisy + tailwind browser -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    * { font-family: "Outfit", sans-serif; }
+  </style>
 </head>
-<body class="screen">
-  <div class="wrap">
-    <div class="flex items-center justify-between">
-      <div>
-        <div class="muted">Available Balance</div>
-        <div id="balance" class="text-3xl font-black">৳0</div>
-        <div id="myMobile" class="muted mt-1"></div>
+
+<body class="min-h-screen max-w-md bg-base-200 mx-auto">
+
+  <header class="border-b border-base-300 sticky top-0 bg-base-200 z-10">
+    <section class="w-11/12 mx-auto py-3 flex justify-between items-center">
+      <div class="flex gap-2 items-center">
+        <div class="w-14">
+          <img src="../assets/logo.png" alt="logo" onerror="this.style.display='none'">
+        </div>
+        <div>
+          <h2 class="text-2xl font-extrabold"><span id="balance">৳0</span></h2>
+          <p class="text-neutral/60">Available Balance</p>
+          <p id="myMobile" class="text-neutral/60 text-sm"></p>
+        </div>
       </div>
-      <button id="btnLogout" class="btn btn-sm btn-outline">Logout</button>
+
+      <button id="btnLogout" class="btn btn-soft">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out
+      </button>
+    </section>
+  </header>
+
+  <section class="w-11/12 mx-auto py-8 space-y-4">
+    <h2 class="text-3xl font-extrabold">Welcome to Pay<span class="text-primary">oo</span></h2>
+    <p class="text-neutral/60">Enjoy easy and convenient financial services with us. Cashout charge is low.</p>
+
+    <!-- Action grid -->
+    <div class="grid grid-cols-3 gap-3">
+      <a href="./add-money.html" class="btn flex-col h-full py-4 btn-soft">
+        <img class="w-8" src="../assets/opt-1.png" alt="" onerror="this.style.display='none'">
+        <p>Add Money</p>
+      </a>
+
+      <a href="./cashout.html" class="btn flex-col h-full py-4 btn-soft">
+        <img class="w-8" src="../assets/opt-2.png" alt="" onerror="this.style.display='none'">
+        <p>Cashout</p>
+      </a>
+
+      <a href="./transfer.html" class="btn flex-col h-full py-4 btn-soft">
+        <img class="w-8" src="../assets/opt-3.png" alt="" onerror="this.style.display='none'">
+        <p>Send Money</p>
+      </a>
+
+      <a href="./bonus.html" class="btn flex-col h-full py-4 btn-soft">
+        <img class="w-8" src="../assets/opt-4.png" alt="" onerror="this.style.display='none'">
+        <p>Get Bonus</p>
+      </a>
+
+      <a href="./pay-bill.html" class="btn flex-col h-full py-4 btn-soft">
+        <img class="w-8" src="../assets/opt-5.png" alt="" onerror="this.style.display='none'">
+        <p>Pay Bill</p>
+      </a>
+
+      <a href="./transactions.html" class="btn flex-col h-full py-4 btn-soft">
+        <img class="w-8" src="../assets/opt-6.png" alt="" onerror="this.style.display='none'">
+        <p>Transactions</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Latest payment list -->
+  <section class="w-11/12 mx-auto pb-10">
+    <div class="flex justify-between items-center mb-3">
+      <h3 class="text-xl font-bold">Latest Payment</h3>
+      <a href="./transactions.html" class="link link-hover text-neutral/60">View All</a>
     </div>
 
-    <div class="mt-6">
-      <div class="title">Welcome to Har<span class="text-indigo-600">kash</span></div>
-      <div class="muted mt-2">Enjoy easy & convenient financial services. Fully responsive demo.</div>
-    </div>
+    <div id="txList" class="space-y-3"></div>
 
-    <div class="grid grid-cols-3 gap-3 mt-6">
-      <a class="btn rounded-2xl h-20 flex flex-col" href="./add-money.html"><span>➕</span><span class="text-xs">Add Money</span></a>
-      <a class="btn rounded-2xl h-20 flex flex-col" href="./cashout.html"><span>🏧</span><span class="text-xs">Cashout</span></a>
-      <a class="btn rounded-2xl h-20 flex flex-col" href="./transfer.html"><span>🔁</span><span class="text-xs">Transfer</span></a>
-      <a class="btn rounded-2xl h-20 flex flex-col" href="./bonus.html"><span>🎁</span><span class="text-xs">Bonus</span></a>
-      <a class="btn rounded-2xl h-20 flex flex-col" href="./pay-bill.html"><span>🧾</span><span class="text-xs">Pay Bill</span></a>
-      <a class="btn btn-primary rounded-2xl h-20 flex flex-col" href="./transactions.html"><span>📜</span><span class="text-xs">Transactions</span></a>
-    </div>
-
-    <div class="card-soft mt-6">
-      <div class="flex items-center justify-between">
-        <div class="font-bold text-lg">Latest Payment</div>
-        <a class="btn btn-ghost btn-sm" href="./transactions.html">View All</a>
-      </div>
-      <div id="txList" class="mt-3 space-y-3"></div>
-    </div>
-
-    <button id="btnDemo" class="btn btn-outline w-full rounded-full mt-6">Load Demo Data</button>
-
-    <div class="h-10"></div>
-  </div>
+    <button id="btnDemo" class="btn btn-outline w-full rounded-full mt-6">
+      Load Demo Data
+    </button>
+  </section>
 
   <script type="module" src="../js/pages/homePage.js"></script>
 </body>
+
 </html>
