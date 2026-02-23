@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Add Money</title></head>
+<body class="screen">
+  <div class="wrap">
+    <div class="flex items-center justify-between">
+      <a class="btn btn-sm btn-ghost" href="./home.html">← Back</a>
+      <div class="font-bold">Add Money</div>
+      <div></div>
+    </div>
+
+    <div class="card-soft mt-6">
+      <label class="font-semibold">Select Bank</label>
+      <select id="bank" class="select w-full mt-2 rounded-full"></select>
+
+      <label class="font-semibold mt-4 block">Amount</label>
+      <input id="amount" class="input-soft mt-2" placeholder="e.g. 5000" inputmode="numeric"/>
+
+      <label class="font-semibold mt-4 block">6 Digit PIN</label>
+      <input id="pin" class="input-soft mt-2" placeholder="Enter 6 digit pin" type="password" inputmode="numeric"/>
+
+      <button id="btnAdd" class="brand-btn mt-5">Add Money</button>
+    </div>
+  </div>
+  <script type="module" src="../js/pages/addMoneyPage.js"></script>
+</body>
+</html>

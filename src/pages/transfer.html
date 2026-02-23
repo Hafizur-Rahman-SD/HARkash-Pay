@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Transfer</title></head>
+<body class="screen">
+  <div class="wrap">
+    <div class="flex items-center justify-between">
+      <a class="btn btn-sm btn-ghost" href="./home.html">← Back</a>
+      <div class="font-bold">Transfer Money</div>
+      <div></div>
+    </div>
+
+    <div class="card-soft mt-6">
+      <label class="font-semibold">Receiver Number (11 digits)</label>
+      <input id="to" class="input-soft mt-2" placeholder="01XXXXXXXXX" inputmode="numeric"/>
+
+      <label class="font-semibold mt-4 block">Amount</label>
+      <input id="amount" class="input-soft mt-2" placeholder="Max 50,000" inputmode="numeric"/>
+
+      <div class="muted mt-3">Max transfer: 50,000</div>
+
+      <label class="font-semibold mt-4 block">6 Digit PIN</label>
+      <input id="pin" class="input-soft mt-2" placeholder="Enter 6 digit pin" type="password" inputmode="numeric"/>
+
+      <button id="btnTransfer" class="brand-btn mt-5">Send Money</button>
+      <div class="muted mt-3">Demo note: Receiver must be registered (Create New Account) to receive.</div>
+    </div>
+  </div>
+  <script type="module" src="../js/pages/transferPage.js"></script>
+</body>
+</html>

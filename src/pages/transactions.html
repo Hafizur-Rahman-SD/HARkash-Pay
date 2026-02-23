@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Transactions</title></head>
+<body class="screen">
+  <div class="wrap">
+    <div class="flex items-center justify-between">
+      <a class="btn btn-sm btn-ghost" href="./home.html">← Back</a>
+      <div class="font-bold">Transactions</div>
+      <div></div>
+    </div>
+
+    <div class="card-soft mt-6">
+      <label class="font-semibold">Filter</label>
+      <select id="filter" class="select w-full mt-2 rounded-full">
+        <option value="ALL">All</option>
+        <option value="ADD_MONEY">Add Money</option>
+        <option value="CASHOUT">Cashout</option>
+        <option value="TRANSFER_SENT">Transfer Sent</option>
+        <option value="TRANSFER_RECEIVED">Transfer Received</option>
+        <option value="PAY_BILL">Pay Bill</option>
+        <option value="BONUS">Bonus</option>
+      </select>
+
+      <label class="font-semibold mt-4 block">Search</label>
+      <input id="search" class="input-soft mt-2" placeholder="Search by title / number" />
+
+      <button id="btnClear" class="btn btn-outline w-full rounded-full mt-4">Clear</button>
+    </div>
+
+    <div id="list" class="mt-6 space-y-3"></div>
+    <div class="h-10"></div>
+  </div>
+
+  <script type="module" src="../js/pages/transactionsPage.js"></script>
+</body>
+</html>

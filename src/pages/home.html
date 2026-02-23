@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HARKASH-PAY | Home</title>
+</head>
+<body class="screen">
+  <div class="wrap">
+    <div class="flex items-center justify-between">
+      <div>
+        <div class="muted">Available Balance</div>
+        <div id="balance" class="text-3xl font-black">৳0</div>
+        <div id="myMobile" class="muted mt-1"></div>
+      </div>
+      <button id="btnLogout" class="btn btn-sm btn-outline">Logout</button>
+    </div>
+
+    <div class="mt-6">
+      <div class="title">Welcome to Har<span class="text-indigo-600">kash</span></div>
+      <div class="muted mt-2">Enjoy easy & convenient financial services. Fully responsive demo.</div>
+    </div>
+
+    <div class="grid grid-cols-3 gap-3 mt-6">
+      <a class="btn rounded-2xl h-20 flex flex-col" href="./add-money.html"><span>➕</span><span class="text-xs">Add Money</span></a>
+      <a class="btn rounded-2xl h-20 flex flex-col" href="./cashout.html"><span>🏧</span><span class="text-xs">Cashout</span></a>
+      <a class="btn rounded-2xl h-20 flex flex-col" href="./transfer.html"><span>🔁</span><span class="text-xs">Transfer</span></a>
+      <a class="btn rounded-2xl h-20 flex flex-col" href="./bonus.html"><span>🎁</span><span class="text-xs">Bonus</span></a>
+      <a class="btn rounded-2xl h-20 flex flex-col" href="./pay-bill.html"><span>🧾</span><span class="text-xs">Pay Bill</span></a>
+      <a class="btn btn-primary rounded-2xl h-20 flex flex-col" href="./transactions.html"><span>📜</span><span class="text-xs">Transactions</span></a>
+    </div>
+
+    <div class="card-soft mt-6">
+      <div class="flex items-center justify-between">
+        <div class="font-bold text-lg">Latest Payment</div>
+        <a class="btn btn-ghost btn-sm" href="./transactions.html">View All</a>
+      </div>
+      <div id="txList" class="mt-3 space-y-3"></div>
+    </div>
+
+    <button id="btnDemo" class="btn btn-outline w-full rounded-full mt-6">Load Demo Data</button>
+
+    <div class="h-10"></div>
+  </div>
+
+  <script type="module" src="../js/pages/homePage.js"></script>
+</body>
+</html>

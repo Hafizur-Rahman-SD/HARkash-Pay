@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --brand: #2f2dbd;
+}
+
+.brand-btn {
+  background: var(--brand);
+  color: white;
+  border-radius: 999px;
+  padding: 12px 16px;
+}
+
+.input-soft {
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  padding: 12px 16px;
+  width: 100%;
+}
+
+.card-soft {
+  background: #f3f4f6;
+  border-radius: 16px;
+  padding: 16px;
+}

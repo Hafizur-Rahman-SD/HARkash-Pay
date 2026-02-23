@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cashout</title></head>
+<body class="screen">
+  <div class="wrap">
+    <div class="flex items-center justify-between">
+      <a class="btn btn-sm btn-ghost" href="./home.html">← Back</a>
+      <div class="font-bold">Cashout</div>
+      <div></div>
+    </div>
+
+    <div class="card-soft mt-6">
+      <label class="font-semibold">Agent Number (11 digits)</label>
+      <input id="agent" class="input-soft mt-2" placeholder="01XXXXXXXXX" inputmode="numeric"/>
+
+      <label class="font-semibold mt-4 block">Amount</label>
+      <input id="amount" class="input-soft mt-2" placeholder="e.g. 1000" inputmode="numeric"/>
+
+      <div class="muted mt-3">Charge: প্রতি 1000 টাকায় 15 টাকা</div>
+
+      <label class="font-semibold mt-4 block">6 Digit PIN</label>
+      <input id="pin" class="input-soft mt-2" placeholder="Enter 6 digit pin" type="password" inputmode="numeric"/>
+
+      <button id="btnCashout" class="brand-btn mt-5">Cashout</button>
+    </div>
+  </div>
+  <script type="module" src="../js/pages/cashoutPage.js"></script>
+</body>
+</html>
