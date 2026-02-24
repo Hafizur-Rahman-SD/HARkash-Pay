@@ -1,11 +1,18 @@
+
+//LocalStorage-based Authentication & User Store
+
 import { onlyDigits, isValidMobile11, isValidPin6 } from "./validators.js";
 
+
+//LocalStorage database table
 const KEYS = {
   USERS: "harkash_users",
   SESSION: "harkash_session",
   USED_BONUS: "harkash_used_bonus", // per user later
 };
 
+
+//for read and write local storage function  ans if no user then return fallback 
 function read(key, fallback) {
   try {
     const raw = localStorage.getItem(key);
